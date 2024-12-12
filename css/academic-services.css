@@ -1,0 +1,180 @@
+/* Services Header */
+.services-header {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+.services-header .input-group {
+    max-width: 300px;
+}
+
+/* Service Section */
+.service-section {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.section-title i {
+    margin-right: 0.5rem;
+}
+
+/* Service Cards */
+.service-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.25rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-orange);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(246, 137, 33, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.service-icon i {
+    font-size: 1.25rem;
+    color: var(--primary-orange);
+}
+
+.service-content h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.service-content p {
+    font-size: 0.813rem;
+    color: #6c757d;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+/* Service Status */
+.service-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #dc3545;
+}
+
+.status-dot.active {
+    background: #28a745;
+}
+
+/* Disabled State */
+.service-card.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.service-card.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* High Contrast Mode */
+body.high-contrast .services-header,
+body.high-contrast .service-section {
+    background: #222;
+    border-color: #444;
+}
+
+body.high-contrast .section-title {
+    color: var(--primary-orange);
+    border-bottom-color: #444;
+}
+
+body.high-contrast .service-card {
+    background: #333;
+    border-color: #444;
+}
+
+body.high-contrast .service-content h4 {
+    color: #fff;
+}
+
+body.high-contrast .service-content p {
+    color: #ccc;
+}
+
+body.high-contrast .service-icon {
+    background: rgba(246, 137, 33, 0.2);
+}
+
+body.high-contrast .service-status {
+    color: #ccc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .services-header .input-group {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+/* Row Spacing */
+.row.g-4 {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1rem;
+}
+
+/* Main Content Spacing */
+main.container-fluid {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+} 

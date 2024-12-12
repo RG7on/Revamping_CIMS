@@ -1,0 +1,193 @@
+:root {
+    --primary-orange: #f68921;
+    --primary-orange-dark: #e66925;
+    --primary-blue: #3959a8;
+    --primary-blue-dark: #29338e;
+    --apple-gray: #f5f5f7;
+    --apple-text: #1d1d1f;
+    --apple-secondary: #86868b;
+}
+
+/* Main Layout */
+body {
+    background-color: var(--apple-gray);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Services Header */
+.services-header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 18px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.services-header h2 {
+    font-weight: 600;
+    color: var(--apple-text);
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.services-header .input-group {
+    max-width: 300px;
+}
+
+.services-header .form-control {
+    border-radius: 12px;
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.75rem 1rem;
+}
+
+/* Service Section */
+.service-section {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 18px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--apple-text);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+/* Service Cards */
+.service-card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 1.5rem;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--primary-orange);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.service-icon i {
+    font-size: 1.75rem;
+    color: white;
+}
+
+.service-content h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--apple-text);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+.service-content p {
+    font-size: 0.9375rem;
+    color: var(--apple-secondary);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+/* Service Status */
+.service-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--apple-secondary);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #dc3545;
+    transition: all 0.3s ease;
+}
+
+.status-dot.active {
+    background: #30d158;
+}
+
+/* Disabled State */
+.service-card.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.service-card.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* High Contrast Mode */
+body.high-contrast .services-header,
+body.high-contrast .service-section,
+body.high-contrast .service-card {
+    background: #1d1d1f;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+body.high-contrast .section-title,
+body.high-contrast .service-content h4 {
+    color: #fff;
+}
+
+body.high-contrast .service-content p,
+body.high-contrast .service-status {
+    color: #86868b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-header {
+        padding: 1.5rem;
+    }
+    
+    .service-section {
+        padding: 1.5rem;
+    }
+    
+    .services-header h2 {
+        font-size: 1.75rem;
+    }
+}
+
+.loading-spinner {
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-orange);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
