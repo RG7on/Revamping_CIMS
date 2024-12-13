@@ -21,7 +21,7 @@ body {
 
 .dashboard-grid {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
@@ -86,9 +86,9 @@ body {
 /* GPA Section */
 .gpa-section {
     margin: 0;
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
-
+    width: 100%;
 }
 
 .gpa-container {
@@ -893,4 +893,9 @@ body.high-contrast .section-card {
         padding: var(--spacing-md);
     }
 }
-  
+
+@media (max-width: 992px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
