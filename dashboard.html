@@ -146,11 +146,37 @@
                             <i class="bi bi-person-badge-fill me-2 text-primary"></i>Personal Information
                         </h5>
                         <div class="personal-info">
-                            <div class="profile-photo">
-                                <img src="https://api.dicebear.com/9.x/miniavs/svg?seed=Sara" 
-                                     alt="Student Photo"
-                                     onerror="this.src='https://api.dicebear.com/7.x/icons/svg?seed=student&backgroundColor=f68921&iconColor=ffffff'">
+                            <!-- Profile Summary with Photo and Stats -->
+                            <div class="profile-summary">
+                                <div class="profile-photo">
+                                    <img src="https://api.dicebear.com/9.x/miniavs/svg?seed=Sara" 
+                                         alt="Student Photo">
+                                </div>
+                                <div class="student-stats">
+                                    <div class="stat-row">
+                                        <i class="bi bi-book-fill text-primary"></i>
+                                        <span class="stat-label">Current Courses:</span>
+                                        <span class="stat-value">6</span>
+                                    </div>
+                                    <div class="stat-row">
+                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                        <span class="stat-label">Absence Warnings:</span>
+                                        <span class="stat-value">2</span>
+                                    </div>
+                                    <div class="stat-row">
+                                        <i class="bi bi-calendar2-x-fill text-info"></i>
+                                        <span class="stat-label">Postponements:</span>
+                                        <span class="stat-value">1</span>
+                                    </div>
+                                    <div class="stat-row">
+                                        <i class="bi bi-shield-fill-exclamation text-danger"></i>
+                                        <span class="stat-label">Academic Probation:</span>
+                                        <span class="stat-value">Yes</span>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Personal Information List -->
                             <ul class="info-list">
                                 <li>
                                     <i class="bi bi-person-fill"></i>
