@@ -693,7 +693,7 @@ h5 i {
 }
 
 .scrollable-attendance {
-    max-height: 500px;
+    max-height: 550px;
     overflow-y: auto;
     padding-right: 10px;
 }
