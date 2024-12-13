@@ -1123,3 +1123,31 @@ body.high-contrast .stat-label {
         width: 100%;
     }
 }
+
+.view-profile-link {
+    font-size: 0.875rem;
+    color: var(--primary-blue);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.view-profile-link:hover {
+    color: var(--primary-blue-dark);
+    text-decoration: none;
+}
+
+.view-profile-link i {
+    font-size: 1rem;
+}
+
+/* High contrast mode adjustments */
+body.high-contrast .view-profile-link {
+    color: var(--primary-orange);
+}
+
+body.high-contrast .view-profile-link:hover {
+    color: var(--primary-orange-dark);
+}
