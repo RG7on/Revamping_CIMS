@@ -3,6 +3,13 @@
     --primary-orange-dark: #e66925;
     --primary-blue: #3959a8;
     --primary-blue-dark: #29338e;
+    --border-radius-lg: 16px;
+    --border-radius-md: 12px;
+    --border-radius-sm: 8px;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
 }
 
 /* Main Layout */
@@ -22,10 +29,11 @@ body {
 /* Welcome Section */
 .welcome-section {
     background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
-    padding: 2rem;
-    border-radius: 10px;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
     color: white;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 4px 20px rgba(57, 89, 168, 0.15);
 }
 
 .welcome-text {
@@ -147,10 +155,10 @@ body {
 /* Quick Actions */
 .actions-section {
     background: white;
-    border-radius: 15px;
-    padding: 1.5rem;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .quick-actions-grid {
@@ -839,5 +847,46 @@ h5 i {
 /* Optional: Pause animation on hover */
 .customize-mode .quick-action-item:hover {
     animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .welcome-section,
+    .actions-section {
+        border-radius: var(--border-radius-md);
+        padding: var(--spacing-md);
+    }
+    
+    .welcome-text {
+        font-size: 1.5rem;
+    }
+}
+
+/* Section Cards Styling */
+.section-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card .card-body {
+    padding: var(--spacing-md);
+}
+
+/* High contrast mode */
+body.high-contrast .section-card {
+    background: #222;
+    border: 1px solid #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-card {
+        border-radius: var(--border-radius-md);
+    }
+    
+    .section-card .card-body {
+        padding: var(--spacing-md);
+    }
 }
   
