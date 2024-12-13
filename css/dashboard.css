@@ -23,7 +23,6 @@ body {
     display: grid;
     grid-template-columns: 30% 70%;
     gap: 1.5rem;
-    padding: 1.5rem;
 }
 
 /* Welcome Section */
@@ -86,9 +85,10 @@ body {
 
 /* GPA Section */
 .gpa-section {
+    margin: 0;
     grid-column: 2;
     grid-row: 1;
-    width: 100%;
+
 }
 
 .gpa-container {
@@ -619,6 +619,9 @@ body {
 /* Ensure proper spacing after navbar */
 main.container-fluid {
     padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* Remove any previous grid-column spanning if it exists */
@@ -689,7 +692,7 @@ h5 i {
 }
 
 .scrollable-attendance {
-    max-height: 400px;
+    max-height: 500px;
     overflow-y: auto;
     padding-right: 10px;
 }
@@ -867,6 +870,7 @@ h5 i {
     border-radius: var(--border-radius-lg);
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
 }
 
 .section-card .card-body {
