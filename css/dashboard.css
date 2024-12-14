@@ -1340,3 +1340,243 @@ body.high-contrast .profile-dropdown .text-muted {
         text-align: left; /* Override previous center alignment */
     }
 }
+
+/* Quick Stats Row in Welcome Section */
+.quick-stats-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.quick-stat-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    padding: 1rem;
+    border-radius: 12px;
+    min-width: 140px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.stat-info {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Academic Progress Stats */
+.academic-progress-stats {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    padding: 1.25rem;
+    border-radius: 12px;
+}
+
+.progress-stat {
+    margin-bottom: 1rem;
+}
+
+.progress-stat:last-child {
+    margin-bottom: 0;
+}
+
+.progress-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.progress-bar-wrapper span {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+}
+
+/* Recent Requests Status */
+.recent-requests {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    padding: 1.25rem;
+    border-radius: 12px;
+}
+
+.request-status-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    min-width: 160px;
+}
+
+.status-badge {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.status-badge.pending {
+    background: #ffc107;
+}
+
+.status-badge.approved {
+    background: #28a745;
+}
+
+.status-details {
+    flex: 1;
+}
+
+.status-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.25rem;
+}
+
+.status-info {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .quick-stats-row,
+    .request-status-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .quick-stat-item,
+    .status-item {
+        width: 100%;
+    }
+
+    .academic-progress-stats,
+    .recent-requests {
+        margin-top: 1rem;
+    }
+}
+
+/* Quick Stats Row - New Linear Design */
+.quick-stats-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+}
+
+.stat-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.stat-indicator i {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-value {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.stat-divider {
+    width: 1px;
+    height: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Academic Progress Stats - More Compact */
+.academic-progress-stats {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+}
+
+.progress-stat.compact {
+    margin-bottom: 0.5rem;
+}
+
+.progress-stat.compact:last-child {
+    margin-bottom: 0;
+}
+
+.progress-stat.compact .progress-label {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.progress-stat.compact .progress {
+    height: 6px;
+}
+
+/* Status Badge Colors */
+.status-badge.processing {
+    background: #6f42c1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .quick-stats-row {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+    }
+
+    .stat-divider {
+        width: 100%;
+        height: 1px;
+        margin: 0.5rem 0;
+    }
+
+    .stat-indicator {
+        width: 100%;
+    }
+}
