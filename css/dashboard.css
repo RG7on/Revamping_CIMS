@@ -1341,108 +1341,124 @@ body.high-contrast .profile-dropdown .text-muted {
     }
 }
 
-/* Quick Stats Row in Welcome Section */
+/* Quick Stats Row - Updated Linear Design */
 .quick-stats-row {
     display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
-}
-
-.quick-stat-item {
+    align-items: center;
+    gap: 1.5rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     border-radius: 12px;
-    min-width: 140px;
-    text-align: center;
+    justify-content: space-between;
 }
 
-.stat-label {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0.5rem;
+.stat-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.stat-icon i {
+    font-size: 1.21rem;
+    color: white;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+    text-align: left;
 }
 
 .stat-value {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 500;
     color: white;
-    margin-bottom: 0.25rem;
+    line-height: 1.2;
+    text-align: left;
 }
 
-.stat-info {
+.stat-label {
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.7);
+    line-height: 1;
+    text-align: left;
 }
 
-/* Academic Progress Stats */
-.academic-progress-stats {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
-    padding: 1.25rem;
-    border-radius: 12px;
-}
-
-.progress-stat {
-    margin-bottom: 1rem;
-}
-
-.progress-stat:last-child {
-    margin-bottom: 0;
-}
-
-.progress-label {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
-}
-
-.progress-bar-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.progress {
-    flex: 1;
-    height: 8px;
+.stat-divider {
+    width: 1px;
+    height: 2rem;
     background: rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
 }
 
-.progress-bar-wrapper span {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.8);
-    white-space: nowrap;
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .quick-stats-row {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .stat-indicator {
+        width: 100%;
+    }
 }
 
 /* Recent Requests Status */
 .recent-requests {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
-    padding: 1.25rem;
+    padding: 1rem 1.5rem;
     border-radius: 12px;
 }
 
 .request-status-row {
     display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-between;
 }
 
 .status-item {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.75rem;
     background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    padding: 0.75rem 1rem;
     border-radius: 8px;
-    min-width: 160px;
+    flex: 1;
 }
 
 .status-badge {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.status-badge.processing {
+    background: #6f42c1;
 }
 
 .status-badge.pending {
@@ -1459,8 +1475,9 @@ body.high-contrast .profile-dropdown .text-muted {
 
 .status-label {
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
     margin-bottom: 0.25rem;
+    font-weight: 500;
 }
 
 .status-info {
@@ -1468,115 +1485,23 @@ body.high-contrast .profile-dropdown .text-muted {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Responsive Adjustments */
+/* Responsive adjustments for status items */
 @media (max-width: 992px) {
-    .quick-stats-row,
     .request-status-row {
         flex-direction: column;
-        align-items: stretch;
+        gap: 1rem;
     }
 
-    .quick-stat-item,
     .status-item {
         width: 100%;
     }
-
-    .academic-progress-stats,
-    .recent-requests {
-        margin-top: 1rem;
-    }
 }
 
-/* Quick Stats Row - New Linear Design */
-.quick-stats-row {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
+/* High contrast mode adjustments */
+body.high-contrast .recent-requests {
+    background: rgba(255, 255, 255, 0.15);
 }
 
-.stat-indicator {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.stat-indicator i {
-    font-size: 1.5rem;
-    opacity: 0.9;
-}
-
-.stat-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.stat-value {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: white;
-}
-
-.stat-label {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.stat-divider {
-    width: 1px;
-    height: 2rem;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Academic Progress Stats - More Compact */
-.academic-progress-stats {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
-    padding: 0.75rem 1rem;
-    border-radius: 12px;
-}
-
-.progress-stat.compact {
-    margin-bottom: 0.5rem;
-}
-
-.progress-stat.compact:last-child {
-    margin-bottom: 0;
-}
-
-.progress-stat.compact .progress-label {
-    font-size: 0.8rem;
-    margin-bottom: 0.25rem;
-}
-
-.progress-stat.compact .progress {
-    height: 6px;
-}
-
-/* Status Badge Colors */
-.status-badge.processing {
-    background: #6f42c1;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .quick-stats-row {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 1rem;
-    }
-
-    .stat-divider {
-        width: 100%;
-        height: 1px;
-        margin: 0.5rem 0;
-    }
-
-    .stat-indicator {
-        width: 100%;
-    }
+body.high-contrast .status-item {
+    background: rgba(255, 255, 255, 0.15);
 }
