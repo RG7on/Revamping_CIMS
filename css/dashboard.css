@@ -724,6 +724,8 @@ h5 i {
     color: white;
     position: relative;
     overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(57, 89, 168, 0.15);
 }
 
 .welcome-section::before {
@@ -1304,4 +1306,37 @@ body.high-contrast .profile-dropdown .dropdown-header {
 
 body.high-contrast .profile-dropdown .text-muted {
     color: #aaa !important;
+}
+
+/* Add these styles for the header content and icon in the welcome section */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-icon {
+    font-size: 2.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+/* Update welcome section responsive styles */
+@media (max-width: 576px) {
+    .header-icon {
+        font-size: 1.98rem;
+        width: 49.5px;
+        height: 49.5px;
+    }
+
+    .welcome-content {
+        text-align: left; /* Override previous center alignment */
+    }
 }
