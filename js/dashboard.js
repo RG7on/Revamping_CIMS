@@ -202,3 +202,29 @@ document.addEventListener('DOMContentLoaded', function() {
     greetingElement.textContent = greeting;
 });
 
+function markAllAsRead() {
+    const unreadNotifications = document.querySelectorAll('.notification-item.unread');
+    unreadNotifications.forEach(notification => {
+        notification.classList.remove('unread');
+    });
+    
+    // Update notification badge
+    const badge = document.querySelector('.notification-badge');
+    badge.style.display = 'none';
+    
+    // Prevent dropdown from closing
+    event.stopPropagation();
+}
+
+// Initialize tooltips and handle notification clicks
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click handler for individual notifications
+    document.querySelectorAll('.notification-item').forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.remove('unread');
+            // Here you can add logic to handle notification clicks
+            // For example, navigate to relevant page or show more details
+        });
+    });
+});
+

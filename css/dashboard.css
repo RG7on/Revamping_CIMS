@@ -1151,3 +1151,118 @@ body.high-contrast .view-profile-link {
 body.high-contrast .view-profile-link:hover {
     color: var(--primary-orange-dark);
 }
+
+/* Notifications Styling */
+.notifications-dropdown {
+    width: 320px;
+    max-width: 90vw;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(25%, -25%);
+    font-size: 0.75rem;
+    padding: 0.25em 0.4em;
+}
+
+.notification-item {
+    transition: background-color 0.2s ease;
+}
+
+.notification-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+}
+
+.notification-item.unread {
+    background-color: rgba(13, 110, 253, 0.02);
+}
+
+.notification-icon {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.notifications-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notifications-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.notifications-body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.notifications-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Ensure dropdown doesn't close when clicking inside */
+.notifications-dropdown {
+    cursor: default;
+}
+
+/* Add these styles for unread indicators */
+.notification-item.unread {
+    background-color: rgba(13, 110, 253, 0.02);
+    position: relative;
+}
+
+.notification-item.unread::before {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 8px;
+    height: 8px;
+    background-color: var(--bs-danger);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    transform: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Update the mark all button styling */
+.notifications-header .btn-link {
+    color: var(--bs-primary);
+    font-size: 0.875rem;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.notifications-header .btn-link:hover {
+    color: var(--bs-primary);
+    background-color: rgba(13, 110, 253, 0.1);
+    border-radius: 4px;
+}
+
+.notifications-header .btn-link i {
+    font-size: 1.1rem;
+    vertical-align: -2px;
+}
