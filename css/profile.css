@@ -233,4 +233,68 @@ body.high-contrast .preference-group {
 /* High contrast mode adjustments */
 body.high-contrast .activity-item {
     background-color: #333;
-} 
+}
+
+/* Update student ID color */
+.profile-image-section .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Form Label Icons */
+.form-label i {
+    margin-right: 0.5rem;
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    width: 1.2rem;
+    text-align: center;
+}
+
+/* Info Item Label Icons */
+.info-item label i {
+    margin-right: 0.5rem;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    width: 1.2rem;
+    text-align: center;
+}
+
+/* High Contrast Mode Adjustments */
+body.high-contrast .form-label i,
+body.high-contrast .info-item label i {
+    color: var(--primary-orange);
+}
+
+/* Make form labels more prominent */
+.form-label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Update info item label styling */
+.info-item label {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--bs-gray-600);
+    margin: 0;
+}
+
+/* Card Header Icons */
+.card-header h5 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.card-header h5 i {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+}
+
+/* High Contrast Mode */
+body.high-contrast .card-header h5 i {
+    color: var(--primary-orange);
+}
+ 
