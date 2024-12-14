@@ -1426,7 +1426,6 @@ body.high-contrast .profile-dropdown .text-muted {
 
 /* Recent Requests Status */
 .recent-requests {
-    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
     padding: 1rem 1.5rem;
     border-radius: 12px;
