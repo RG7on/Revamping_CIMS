@@ -68,7 +68,6 @@ main.container-fluid {
     background: white;
     border-radius: var(--border-radius-lg);
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    margin-bottom: 1.5rem;
     padding: 1.5rem;
 }
 
@@ -285,6 +284,49 @@ body.high-contrast .service-card[data-service-type="financial"] .service-icon {
 
     .section-title {
         font-size: 1.1rem;
+    }
+}
+
+/* Add these styles for the header icons */
+.services-header h2 i {
+    font-size: 1.8rem;
+    vertical-align: -3px;
+    opacity: 0.9;
+}
+
+/* Responsive adjustment for the header icons */
+@media (max-width: 576px) {
+    .services-header h2 i {
+        font-size: 1.4rem;
+    }
+}
+
+/* Update the header icon styles */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-icon {
+    font-size: 2.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .header-icon {
+        font-size: 1.98rem;
+        width: 49.5px;
+        height: 49.5px;
     }
 }
  
