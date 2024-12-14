@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIMS - Profile & Preferences</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Reuse the same navbar from dashboard.html -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+        <!-- Copy the entire navbar content from dashboard.html -->
+    </nav>
+
+    <main class="container-fluid pt-4">
+        <!-- Page Header -->
+        <div class="page-header mb-4">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h2 class="page-title">Profile & Preferences</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Profile & Preferences</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="row">
+            <!-- Profile Sidebar -->
+            <div class="col-lg-4 mb-4">
+                <div class="profile-sidebar">
+                    <div class="profile-image-section text-center p-4">
+                        <div class="profile-image-wrapper mb-3">
+                            <img src="https://api.dicebear.com/9.x/miniavs/svg?seed=Sara" 
+                                 alt="Profile Photo" 
+                                 class="profile-image">
+                            <button class="change-photo-btn" onclick="triggerPhotoUpload()">
+                                <i class="bi bi-camera-fill"></i>
+                            </button>
+                        </div>
+                        <h4 class="mb-1">Ahmed Mohammed Al-Siyabi</h4>
+                        <p class="text-muted mb-3">Student ID: 202012345</p>
+                        <div class="student-status">
+                            <span class="badge bg-success">Active Student</span>
+                            <span class="badge bg-warning text-dark">Academic Probation</span>
+                        </div>
+                    </div>
+                    <div class="profile-nav">
+                        <button class="nav-btn active" data-section="personal-info">
+                            <i class="bi bi-person-fill"></i>
+                            Personal Information
+                        </button>
+                        <button class="nav-btn" data-section="academic-info">
+                            <i class="bi bi-mortarboard-fill"></i>
+                            Academic Information
+                        </button>
+                        <button class="nav-btn" data-section="preferences">
+                            <i class="bi bi-gear-fill"></i>
+                            Preferences
+                        </button>
+                        <button class="nav-btn" data-section="privacy">
+                            <i class="bi bi-shield-lock-fill"></i>
+                            Privacy & Security
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Content Sections -->
+            <div class="col-lg-8">
+                <!-- Personal Information Section -->
+                <div class="profile-section active" id="personal-info">
+                    <div class="section-card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Personal Information</h5>
+                        </div>
+                        <div class="card-body">
+                            <form class="profile-form">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Full Name (English)</label>
+                                        <input type="text" class="form-control" value="Ahmed Mohammed Al-Siyabi" readonly>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Full Name (Arabic)</label>
+                                        <input type="text" class="form-control" value="أحمد محمد السيابي" readonly>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Date of Birth</label>
+                                        <input type="text" class="form-control" value="15 March 2000" readonly>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Gender</label>
+                                        <input type="text" class="form-control" value="Male" readonly>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" value="ahmed.alsiyabi@student.edu.om">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" value="+968 9123 4567">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label class="form-label">Address</label>
+                                        <textarea class="form-control" rows="3">Al Khoud, Muscat, Oman</textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Information Section -->
+                <div class="profile-section" id="academic-info">
+                    <div class="section-card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Academic Information</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="academic-info-grid">
+                                <div class="info-item">
+                                    <label>Department</label>
+                                    <span>Information Technology</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Major</label>
+                                    <span>Software Development</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Academic Level</label>
+                                    <span>Level 3</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Academic Advisor</label>
+                                    <span>Dr. Fatima Al-Balushi</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Enrollment Date</label>
+                                    <span>September 2020</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Expected Graduation</label>
+                                    <span>June 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preferences Section -->
+                <div class="profile-section" id="preferences">
+                    <div class="section-card">
+                        <div class="card-header">
+                            <h5 class="mb-0">System Preferences</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Language Preferences -->
+                            <div class="preference-group mb-4">
+                                <h6 class="preference-title">
+                                    <i class="bi bi-translate"></i>
+                                    Language & Region
+                                </h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Interface Language</label>
+                                        <select class="form-select">
+                                            <option value="en">English</option>
+                                            <option value="ar">العربية</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Date Format</label>
+                                        <select class="form-select">
+                                            <option value="dd/mm/yyyy">DD/MM/YYYY</option>
+                                            <option value="mm/dd/yyyy">MM/DD/YYYY</option>
+                                            <option value="yyyy/mm/dd">YYYY/MM/DD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accessibility Preferences -->
+                            <div class="preference-group mb-4">
+                                <h6 class="preference-title">
+                                    <i class="bi bi-eye"></i>
+                                    Accessibility
+                                </h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="highContrastMode">
+                                            <label class="form-check-label" for="highContrastMode">
+                                                High Contrast Mode
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Text Size</label>
+                                        <select class="form-select">
+                                            <option value="small">Small</option>
+                                            <option value="medium" selected>Medium</option>
+                                            <option value="large">Large</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Notification Preferences -->
+                            <div class="preference-group">
+                                <h6 class="preference-title">
+                                    <i class="bi bi-bell"></i>
+                                    Notifications
+                                </h6>
+                                <div class="notification-preferences">
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                                        <label class="form-check-label" for="emailNotifications">
+                                            Email Notifications
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input" type="checkbox" id="smsNotifications">
+                                        <label class="form-check-label" for="smsNotifications">
+                                            SMS Notifications
+                                        </label>
+                                    </div>
+                                    <div class="notification-types mt-3">
+                                        <label class="form-label">Notify me about:</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gradeNotifications" checked>
+                                            <label class="form-check-label" for="gradeNotifications">
+                                                New Grades
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="attendanceNotifications" checked>
+                                            <label class="form-check-label" for="attendanceNotifications">
+                                                Attendance Warnings
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="announcementNotifications" checked>
+                                            <label class="form-check-label" for="announcementNotifications">
+                                                Course Announcements
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy & Security Section -->
+                <div class="profile-section" id="privacy">
+                    <div class="section-card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Security Settings</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Account Security -->
+                            <div class="security-group">
+                                <h6 class="security-title">
+                                    <i class="bi bi-shield-lock"></i>
+                                    Account Security
+                                </h6>
+                                <div class="mb-4">
+                                    <button class="btn btn-outline-primary mb-3" onclick="changePassword()">
+                                        <i class="bi bi-key"></i>
+                                        Change Password
+                                    </button>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input" type="checkbox" id="twoFactorAuth">
+                                        <label class="form-check-label" for="twoFactorAuth">
+                                            Enable Two-Factor Authentication
+                                        </label>
+                                        <small class="form-text text-muted d-block">
+                                            Add an extra layer of security to your account
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <!-- Login Activity -->
+                                <h6 class="security-title mt-4">
+                                    <i class="bi bi-clock-history"></i>
+                                    Recent Login Activity
+                                </h6>
+                                <div class="login-activity">
+                                    <div class="activity-item d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <p class="mb-0"><i class="bi bi-laptop"></i> Windows PC - Chrome Browser</p>
+                                            <small class="text-muted">Muscat, Oman</small>
+                                        </div>
+                                        <small class="text-muted">Just now</small>
+                                    </div>
+                                    <div class="activity-item d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <p class="mb-0"><i class="bi bi-phone"></i> iPhone Mobile - Safari Browser</p>
+                                            <small class="text-muted">Muscat, Oman</small>
+                                        </div>
+                                        <small class="text-muted">Yesterday, 15:45</small>
+                                    </div>
+                                </div>
+                                <button class="btn btn-link text-danger p-0">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                    Sign out from all devices
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html> 

@@ -1266,3 +1266,42 @@ body.high-contrast .view-profile-link:hover {
     font-size: 1.1rem;
     vertical-align: -2px;
 }
+
+/* Profile Dropdown Styling */
+.profile-dropdown {
+    width: 280px;
+    padding: 0.5rem 0;
+}
+
+.mini-profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-orange);
+}
+
+.profile-dropdown .dropdown-item {
+    padding: 0.75rem 1rem;
+}
+
+.profile-dropdown .dropdown-item i {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.profile-dropdown .dropdown-header {
+    background: var(--bs-light);
+    border-radius: var(--border-radius-sm);
+    margin: 0 0.5rem;
+}
+
+/* High contrast mode adjustments */
+body.high-contrast .profile-dropdown .dropdown-header {
+    background: #333;
+}
+
+body.high-contrast .profile-dropdown .text-muted {
+    color: #aaa !important;
+}
