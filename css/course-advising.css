@@ -1,0 +1,479 @@
+/* Advisor Card Styles */
+.advisor-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.advisor-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.advisor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.advisor-details {
+    flex: 1;
+}
+
+.advisor-details h5 {
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.advisor-contact {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.advisor-contact span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Progress Overview Styles */
+.progress-overview {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+}
+
+/* Recommended Courses Styles */
+.recommended-courses {
+    display: grid;
+    gap: 1rem;
+}
+
+.course-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.25rem;
+    transition: transform 0.2s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Academic Status Styles */
+.academic-status {
+    padding: 1.25rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* High Contrast Mode */
+body.high-contrast .advisor-card {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.high-contrast .progress-overview,
+body.high-contrast .course-card,
+body.high-contrast .academic-status {
+    background: #333;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .advisor-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .advisor-contact {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
+
+/* Completion Circle Styles */
+.completion-circle {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.circle-progress {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--primary-blue) calc(var(--progress) * 1%),
+        #e9ecef calc(var(--progress) * 1%)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-inner {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-value {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.progress-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+/* Progress Stats Styles */
+.stat-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(var(--bs-primary-rgb), 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.stat-info h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.stat-info p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* Course Card Styles */
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.course-code {
+    font-weight: 500;
+    color: var(--primary-blue);
+}
+
+.credit-badge {
+    background: rgba(var(--bs-primary-rgb), 0.1);
+    color: var(--primary-blue);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.course-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.course-description {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.course-details {
+    margin-bottom: 1rem;
+}
+
+.prerequisites {
+    margin-bottom: 0.5rem;
+}
+
+.detail-label {
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.course-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.course-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Academic Status Styles */
+.status-item {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.status-item:last-child {
+    border-bottom: none;
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.status-header h6 {
+    margin: 0;
+}
+
+.status-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.status-item.warning {
+    background: rgba(var(--bs-warning-rgb), 0.1);
+    border-radius: 8px;
+}
+
+.registration-timeline {
+    margin-top: 1rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.timeline-item .date {
+    font-weight: 500;
+    min-width: 60px;
+}
+
+/* High Contrast Mode Adjustments */
+body.high-contrast .circle-inner {
+    background: #333;
+}
+
+body.high-contrast .progress-label {
+    color: #fff;
+}
+
+body.high-contrast .stat-card {
+    background: #444;
+}
+
+body.high-contrast .status-item.warning {
+    background: rgba(255, 193, 7, 0.2);
+} 
+
+/* Study Plan Progress Styles */
+.study-plan-summary {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.plan-header {
+    margin-bottom: 1.5rem;
+}
+
+.plan-header h4 {
+    font-size: 1.25rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.credit-summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.credit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.credit-count {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.credit-item.completed .credit-count {
+    color: var(--primary-blue);
+}
+
+.credit-item.remaining .credit-count {
+    color: var(--primary-orange);
+}
+
+.credit-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.credit-divider {
+    width: 1px;
+    height: 40px;
+    background: #dee2e6;
+}
+
+/* Requirements Breakdown Styles */
+.requirements-breakdown {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.breakdown-title {
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+}
+
+.requirements-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.requirement-category {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.category-header h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.credits-info {
+    font-size: 0.875rem;
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+.progress {
+    height: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.category-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.next-steps {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.next-steps h6 {
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.steps-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.steps-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #6c757d;
+}
+
+.steps-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-orange);
+}
+
+/* High Contrast Mode */
+body.high-contrast .study-plan-summary,
+body.high-contrast .requirements-breakdown {
+    background: #222;
+}
+
+body.high-contrast .requirement-category,
+body.high-contrast .next-steps {
+    background: #333;
+}
+
+body.high-contrast .credit-label,
+body.high-contrast .category-details,
+body.high-contrast .steps-list li {
+    color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .study-plan-summary {
+        margin-bottom: 1.5rem;
+    }
+} 

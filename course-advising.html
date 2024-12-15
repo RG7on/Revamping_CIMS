@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIMS - Course Advising</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/academic-services.css" rel="stylesheet">
+    <link href="css/course-advising.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar (Same as other pages) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="dashboard.html">
+                <img src="media/Logo.png" alt="UTAS Logo" height="40">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html"><i class="bi bi-house-fill"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="academic-services.html">
+                            <i class="bi bi-mortarboard-fill"></i> Academic Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="administrative-services.html">
+                            <i class="bi bi-clipboard2-check-fill"></i> Administrative Services
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Navigation Items (Same as other pages) -->
+                <!-- ... (Include notifications, profile dropdown, and help icon) ... -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container-fluid pt-4">
+        <!-- Header Section -->
+        <div class="services-header">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="header-content">
+                        <i class="bi bi-person-video3 header-icon"></i>
+                        <div>
+                            <h2 class="mb-2">Course Advising</h2>
+                            <p class="text-muted mb-0">Get guidance for course selection and academic planning</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="advisor-info">
+                        <div class="advisor-card">
+                            <div class="advisor-photo">
+                                <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=advisor" alt="Advisor Photo">
+                            </div>
+                            <div class="advisor-details">
+                                <h5>Dr. Fatima Al-Balushi</h5>
+                                <p class="text-muted mb-2">Academic Advisor</p>
+                                <div class="advisor-contact">
+                                    <span><i class="bi bi-envelope-fill"></i> f.albalushi@edu.om</span>
+                                    <span><i class="bi bi-telephone-fill"></i> Ext. 1234</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-light">
+                                <i class="bi bi-calendar2-plus"></i> Schedule Meeting
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="row g-4">
+            <!-- Study Plan Progress -->
+            <div class="col-12">
+                <div class="service-section">
+                    <h3 class="section-title">
+                        <i class="bi bi-graph-up"></i> Study Plan Progress
+                    </h3>
+                    <div class="progress-overview">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="study-plan-summary">
+                                    <div class="plan-header">
+                                        <h4>Bachelor of IT - Software Development</h4>
+                                        <p class="text-muted">Total Program Credits: 120</p>
+                                    </div>
+                                    <div class="completion-circle" data-progress="65">
+                                        <div class="circle-progress">
+                                            <div class="circle-inner">
+                                                <span class="progress-value">65%</span>
+                                                <span class="progress-label">Overall Progress</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="credit-summary">
+                                        <div class="credit-item completed">
+                                            <span class="credit-count">78</span>
+                                            <span class="credit-label">Credits Completed</span>
+                                        </div>
+                                        <div class="credit-divider"></div>
+                                        <div class="credit-item remaining">
+                                            <span class="credit-count">42</span>
+                                            <span class="credit-label">Credits Remaining</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="requirements-breakdown">
+                                    <h5 class="breakdown-title">Program Requirements Breakdown</h5>
+                                    <div class="requirements-grid">
+                                        <!-- University Requirements -->
+                                        <div class="requirement-category">
+                                            <div class="category-header">
+                                                <h6>University Requirements</h6>
+                                                <span class="credits-info">24 of 30 CR</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" style="width: 80%"></div>
+                                            </div>
+                                            <div class="category-details">
+                                                <span class="completed">8 courses completed</span>
+                                                <span class="remaining">2 courses remaining</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- College Requirements -->
+                                        <div class="requirement-category">
+                                            <div class="category-header">
+                                                <h6>College Requirements</h6>
+                                                <span class="credits-info">27 of 36 CR</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" style="width: 75%"></div>
+                                            </div>
+                                            <div class="category-details">
+                                                <span class="completed">9 courses completed</span>
+                                                <span class="remaining">3 courses remaining</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Major Requirements -->
+                                        <div class="requirement-category">
+                                            <div class="category-header">
+                                                <h6>Major Requirements</h6>
+                                                <span class="credits-info">21 of 42 CR</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" style="width: 50%"></div>
+                                            </div>
+                                            <div class="category-details">
+                                                <span class="completed">7 courses completed</span>
+                                                <span class="remaining">7 courses remaining</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Elective Requirements -->
+                                        <div class="requirement-category">
+                                            <div class="category-header">
+                                                <h6>Elective Courses</h6>
+                                                <span class="credits-info">6 of 12 CR</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" style="width: 50%"></div>
+                                            </div>
+                                            <div class="category-details">
+                                                <span class="completed">2 courses completed</span>
+                                                <span class="remaining">2 courses remaining</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="next-steps mt-4">
+                                        <h6><i class="bi bi-arrow-right-circle-fill"></i> Next Steps</h6>
+                                        <ul class="steps-list">
+                                            <li>Complete remaining Major Requirements (21 CR)</li>
+                                            <li>Take 2 more Elective courses (6 CR)</li>
+                                            <li>Finish University Requirements (6 CR)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Recommendations -->
+            <div class="col-md-8">
+                <div class="service-section">
+                    <h3 class="section-title">
+                        <i class="bi bi-lightbulb"></i> Recommended Courses
+                    </h3>
+                    <div class="recommended-courses">
+                        <div class="course-card">
+                            <div class="course-header">
+                                <span class="course-code">PROG2210</span>
+                                <span class="credit-badge">3 CR</span>
+                            </div>
+                            <h4 class="course-title">Programming II</h4>
+                            <p class="course-description">Advanced programming concepts including object-oriented programming, inheritance, and polymorphism.</p>
+                            <div class="course-details">
+                                <div class="prerequisites">
+                                    <span class="detail-label">Prerequisites:</span>
+                                    <span class="detail-value">PROG1110 (Completed)</span>
+                                </div>
+                                <div class="course-stats">
+                                    <div class="stat">
+                                        <i class="bi bi-people-fill"></i>
+                                        <span>25/30 enrolled</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="bi bi-calendar3"></i>
+                                        <span>MW 10:00-11:20</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn btn-primary">
+                                    <i class="bi bi-plus-circle"></i> Add to Plan
+                                </button>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="bi bi-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Add more course cards with similar structure -->
+                        <!-- Additional recommended courses... -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Status -->
+            <div class="col-md-4">
+                <div class="service-section">
+                    <h3 class="section-title">
+                        <i class="bi bi-info-circle"></i> Academic Status
+                    </h3>
+                    <div class="academic-status">
+                        <div class="status-item">
+                            <div class="status-header">
+                                <i class="bi bi-mortarboard-fill text-primary"></i>
+                                <h6>Academic Standing</h6>
+                            </div>
+                            <p class="status-value">Good Standing</p>
+                        </div>
+                        
+                        <div class="status-item">
+                            <div class="status-header">
+                                <i class="bi bi-calendar-check-fill text-success"></i>
+                                <h6>Expected Graduation</h6>
+                            </div>
+                            <p class="status-value">Spring 2025</p>
+                        </div>
+                        
+                        <div class="status-item warning">
+                            <div class="status-header">
+                                <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                <h6>Course Load Warning</h6>
+                            </div>
+                            <p class="status-message">Maximum load: 15 credits due to academic probation</p>
+                        </div>
+                        
+                        <div class="registration-timeline">
+                            <h6>Important Dates</h6>
+                            <div class="timeline-item">
+                                <span class="date">Mar 15</span>
+                                <span class="event">Course Registration Opens</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">Mar 20</span>
+                                <span class="event">Advising Session Deadline</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">Mar 25</span>
+                                <span class="event">Add/Drop Period Begins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Accessibility Controls -->
+    <div class="accessibility-controls">
+        <button class="btn btn-sm btn-outline-secondary me-2" onclick="adjustTextSize(1)">
+            <i class="bi bi-zoom-in"></i>
+        </button>
+        <button class="btn btn-sm btn-outline-secondary me-2" onclick="adjustTextSize(-1)">
+            <i class="bi bi-zoom-out"></i>
+        </button>
+        <button class="btn btn-sm btn-outline-secondary" onclick="toggleHighContrast()" id="contrastToggle">
+            <i class="bi bi-sun-fill"></i>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html> 
