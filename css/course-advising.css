@@ -843,7 +843,7 @@ body.high-contrast .stat-label {
 }
 
 .prereq-courses {
-    display: flex;
+
     flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: 0.5rem;
@@ -856,7 +856,7 @@ body.high-contrast .stat-label {
     font-size: 0.813rem;
     transition: all 0.2s ease;
     cursor: pointer;
-    display: flex;
+
     flex-direction: column;
     gap: 0.25rem;
     position: relative;
