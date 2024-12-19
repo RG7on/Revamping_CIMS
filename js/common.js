@@ -63,4 +63,80 @@ function showToast(message, type = 'info') {
     
     document.querySelector('.toast-container').appendChild(toast);
     setTimeout(() => toast.remove(), 3000);
-} 
+}
+
+// Elective Course Selection
+function selectElective(element) {
+    // Remove selection from other courses
+    document.querySelectorAll('.elective-course').forEach(course => {
+        course.classList.remove('selected');
+    });
+    
+    // Select the clicked course
+    element.classList.add('selected');
+    
+    // Check the radio button
+    element.querySelector('input[type="radio"]').checked = true;
+}
+
+function confirmElective() {
+    const selectedCourse = document.querySelector('.elective-course.selected');
+    if (!selectedCourse) {
+        alert('Please select an elective course');
+        return;
+    }
+
+    // Get course details
+    const courseTitle = selectedCourse.querySelector('h6').textContent;
+    const [courseCode, courseName] = courseTitle.split(' - ');
+    const credits = selectedCourse.querySelector('.badge.bg-primary').textContent;
+    const courseType = selectedCourse.querySelector('.badge:not(.bg-primary)').textContent;
+
+    // Update the elective slot with selected course
+    const activeSlot = document.querySelector('.elective-slot[data-active="true"]');
+    if (activeSlot) {
+        activeSlot.querySelector('.course-code').textContent = courseCode;
+        activeSlot.querySelector('.course-name').textContent = courseName;
+        activeSlot.querySelector('.course-credits').textContent = credits;
+        activeSlot.querySelector('.course-status').textContent = 'Planned';
+        activeSlot.classList.remove('elective-slot');
+        activeSlot.removeAttribute('data-bs-toggle');
+        activeSlot.removeAttribute('data-bs-target');
+        activeSlot.removeAttribute('data-active');
+    }
+
+    // Close the modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('electiveModal'));
+    modal.hide();
+}
+
+// Filter elective courses
+document.querySelectorAll('.elective-filters button').forEach(button => {
+    button.addEventListener('click', function() {
+        // Update active state
+        document.querySelectorAll('.elective-filters button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        this.classList.add('active');
+
+        // Filter courses
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.elective-course').forEach(course => {
+            if (filter === 'all' || course.classList.contains(filter)) {
+                course.style.display = 'block';
+            } else {
+                course.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Set active elective slot when modal is opened
+document.getElementById('electiveModal').addEventListener('show.bs.modal', function(event) {
+    const button = event.relatedTarget;
+    // Mark the clicked slot as active
+    document.querySelectorAll('.elective-slot').forEach(slot => {
+        slot.removeAttribute('data-active');
+    });
+    button.setAttribute('data-active', 'true');
+}); 

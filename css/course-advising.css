@@ -843,30 +843,124 @@ body.high-contrast .stat-label {
 }
 
 .prereq-courses {
-    display: inline-flex;
-    gap: 0.5rem;
+    display: flex;
     flex-wrap: wrap;
-    margin-left: 0.5rem;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 .prereq-course {
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
     font-weight: 500;
     font-size: 0.813rem;
     transition: all 0.2s ease;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    position: relative;
+    padding-left: 1.25rem;
 }
 
 .prereq-course::before {
     content: '';
-    display: inline-block;
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
     width: 6px;
     height: 6px;
     border-radius: 50%;
+}
+
+.prereq-code {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.prereq-name {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+/* Prerequisites status styles */
+.prereq-course.completed {
+    background: rgba(40, 167, 69, 0.05);
+}
+
+.prereq-course.completed .prereq-code,
+.prereq-course.completed .prereq-name {
+    color: #28a745;
+}
+
+.prereq-course.completed::before {
+    background: #28a745;
+}
+
+.prereq-course.in-progress {
+    background: rgba(57, 89, 168, 0.05);
+}
+
+.prereq-course.in-progress .prereq-code,
+.prereq-course.in-progress .prereq-name {
+    color: var(--primary-blue);
+}
+
+.prereq-course.in-progress::before {
+    background: var(--primary-blue);
+}
+
+.prereq-course.planned {
+    background: rgba(255, 193, 7, 0.05);
+}
+
+.prereq-course.planned .prereq-code,
+.prereq-course.planned .prereq-name {
+    color: #ffc107;
+}
+
+.prereq-course.planned::before {
+    background: #ffc107;
+}
+
+/* Update prerequisites container */
+.course-prerequisites {
+    font-size: 0.813rem;
+    padding-top: 0.75rem;
+    margin-top: 0.5rem;
+    border-top: 1px dashed #e9ecef;
+    color: #6c757d;
+}
+
+.prereq-courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* High Contrast Mode */
+body.high-contrast .prereq-course {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.high-contrast .prereq-code,
+body.high-contrast .prereq-name {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .prereq-courses {
+        margin-top: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .prereq-course {
+        width: 100%;
+    }
 }
 
 /* Status-specific styles */
@@ -1198,5 +1292,154 @@ body.high-contrast .test-score {
     .test-results {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+}
+
+/* Elective Course Slot Styles */
+.elective-slot {
+    border: 2px dashed var(--primary-blue) !important;
+    background: transparent !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.elective-slot:hover {
+    background: rgba(13, 110, 253, 0.02) !important;
+    border-color: var(--bs-primary) !important;
+    transform: translateX(5px);
+}
+
+.elective-slot .course-main {
+    opacity: 0.8;
+}
+
+.elective-slot .course-code {
+    color: var(--primary-blue);
+    background: rgba(13, 110, 253, 0.05);
+}
+
+.elective-slot .course-name {
+    color: var(--primary-blue);
+    font-style: italic;
+}
+
+.elective-slot .course-status {
+    background: rgba(13, 110, 253, 0.1);
+    color: var(--primary-blue);
+    border: 1px dashed var(--primary-blue);
+}
+
+.elective-slot::before {
+    background: var(--primary-blue);
+    opacity: 0.5;
+}
+
+/* High Contrast Mode */
+body.high-contrast .elective-slot {
+    border-color: #fff !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+body.high-contrast .elective-slot:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.high-contrast .elective-slot .course-code,
+body.high-contrast .elective-slot .course-name,
+body.high-contrast .elective-slot .course-status {
+    color: #fff;
+}
+
+/* Elective Modal Styles */
+.elective-filters {
+    padding: 1rem 0;
+}
+
+.elective-courses {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.elective-course {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.elective-course:hover {
+    background: rgba(13, 110, 253, 0.05);
+    border-color: var(--primary-blue);
+}
+
+.elective-course.selected {
+    background: rgba(13, 110, 253, 0.1);
+    border-color: var(--primary-blue);
+}
+
+.elective-course h6 {
+    color: var(--primary-blue);
+}
+
+.elective-course p {
+    font-size: 0.875rem;
+}
+
+/* Badge Styles */
+.badge {
+    padding: 0.4em 0.6em;
+    font-weight: 500;
+}
+
+.badge.bg-secondary {
+    background-color: #6c757d !important;
+}
+
+.badge.bg-info {
+    background-color: #0dcaf0 !important;
+}
+
+.badge.bg-success {
+    background-color: #198754 !important;
+}
+
+/* High Contrast Mode */
+body.high-contrast .elective-slot {
+    background: #333;
+    border-color: #444;
+}
+
+body.high-contrast .elective-slot:hover {
+    background: #444;
+}
+
+body.high-contrast .elective-course {
+    background: #333;
+    border-color: #444;
+}
+
+body.high-contrast .elective-course:hover {
+    background: #444;
+}
+
+body.high-contrast .elective-course.selected {
+    background: rgba(13, 110, 253, 0.2);
+    border-color: var(--primary-blue);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .elective-filters .btn-group {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .elective-course {
+        padding: 0.75rem;
     }
 }
