@@ -84,211 +84,892 @@
 
         <!-- Main Content Grid -->
         <div class="row g-4">
-            <!-- Study Plan Progress -->
+            <!-- Study Plan -->
             <div class="col-12">
                 <div class="service-section">
                     <h3 class="section-title">
-                        <i class="bi bi-graph-up"></i> Study Plan Progress
+                        <i class="bi bi-mortarboard-fill"></i> Study Plan
                     </h3>
-                    <div class="progress-overview">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="study-plan-summary">
-                                    <div class="plan-header">
+                    <div class="study-plan-container">
+                        <!-- Program Overview -->
+                        <div class="program-overview">
+                            <div class="program-header">
                                         <h4>Bachelor of IT - Software Development</h4>
-                                        <p class="text-muted">Total Program Credits: 120</p>
-                                    </div>
-                                    <div class="completion-circle" data-progress="65">
-                                        <div class="circle-progress">
-                                            <div class="circle-inner">
-                                                <span class="progress-value">65%</span>
-                                                <span class="progress-label">Overall Progress</span>
+                                <div class="program-stats">
+                                    <!-- Credits Overview Group -->
+                                    <div class="stats-section credits-section">
+                                        <span class="section-label">Credits Overview</span>
+                                        <div class="stats-content">
+                                            <div class="stat-item">
+                                                <i class="bi bi-collection"></i>
+                                                <span class="stat-value">120</span>
+                                                <span class="stat-label">Total Credits</span>
+                                            </div>
+                                            <div class="stat-divider"></div>
+                                            <div class="stat-item">
+                                                <i class="bi bi-check-circle"></i>
+                                                <span class="stat-value">78</span>
+                                                <span class="stat-label">Completed</span>
+                                            </div>
+                                            <div class="stat-divider"></div>
+                                            <div class="stat-item">
+                                                <i class="bi bi-hourglass-split"></i>
+                                                <span class="stat-value">42</span>
+                                                <span class="stat-label">Remaining</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="credit-summary">
-                                        <div class="credit-item completed">
-                                            <span class="credit-count">78</span>
-                                            <span class="credit-label">Credits Completed</span>
-                                        </div>
-                                        <div class="credit-divider"></div>
-                                        <div class="credit-item remaining">
-                                            <span class="credit-count">42</span>
-                                            <span class="credit-label">Credits Remaining</span>
+
+                                    <!-- Academic Status Group -->
+                                    <div class="stats-section status-section">
+                                        <span class="section-label">Academic Status</span>
+                                        <div class="stats-content">
+                                            <div class="stat-item">
+                                                <i class="bi bi-mortarboard-fill text-primary"></i>
+                                                <span class="stat-value">Good Standing</span>
+                                                <span class="stat-label">Academic Standing</span>
+                                            </div>
+                                            <div class="stat-divider"></div>
+                                            <div class="stat-item">
+                                                <i class="bi bi-calendar-check-fill text-success"></i>
+                                                <span class="stat-value">Spring 2025</span>
+                                                <span class="stat-label">Expected Graduation</span>
+                                            </div>
+                                            <div class="stat-divider"></div>
+                                            <div class="stat-item">
+                                                <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                                <span class="stat-value">15 Credits</span>
+                                                <span class="stat-label">Maximum Course Load</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-8">
-                                <div class="requirements-breakdown">
-                                    <h5 class="breakdown-title">Program Requirements Breakdown</h5>
-                                    <div class="requirements-grid">
-                                        <!-- University Requirements -->
-                                        <div class="requirement-category">
-                                            <div class="category-header">
-                                                <h6>University Requirements</h6>
-                                                <span class="credits-info">24 of 30 CR</span>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-success" style="width: 80%"></div>
-                                            </div>
-                                            <div class="category-details">
-                                                <span class="completed">8 courses completed</span>
-                                                <span class="remaining">2 courses remaining</span>
-                                            </div>
-                                        </div>
 
-                                        <!-- College Requirements -->
-                                        <div class="requirement-category">
-                                            <div class="category-header">
-                                                <h6>College Requirements</h6>
-                                                <span class="credits-info">27 of 36 CR</span>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-success" style="width: 75%"></div>
-                                            </div>
-                                            <div class="category-details">
-                                                <span class="completed">9 courses completed</span>
-                                                <span class="remaining">3 courses remaining</span>
-                                            </div>
-                                        </div>
+                            
 
-                                        <!-- Major Requirements -->
-                                        <div class="requirement-category">
-                                            <div class="category-header">
-                                                <h6>Major Requirements</h6>
-                                                <span class="credits-info">21 of 42 CR</span>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-success" style="width: 50%"></div>
-                                            </div>
-                                            <div class="category-details">
-                                                <span class="completed">7 courses completed</span>
-                                                <span class="remaining">7 courses remaining</span>
-                                            </div>
-                                        </div>
+                            <!-- Academic Journey Timeline -->
+                            <div class="academic-journey">
+                                <div class="journey-timeline">
+                                    
 
-                                        <!-- Elective Requirements -->
-                                        <div class="requirement-category">
-                                            <div class="category-header">
-                                                <h6>Elective Courses</h6>
-                                                <span class="credits-info">6 of 12 CR</span>
+                                    <!-- Legend (Moved here) -->
+                                    <div class="journey-legend">
+                                        <div class="legend-item">
+                                            <span class="legend-dot completed"></span>
+                                            <span>Completed</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-dot in-progress"></span>
+                                            <span>In Progress</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-dot planned"></span>
+                                            <span>Planned</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-dot optional"></span>
+                                            <span>Optional</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-dot future"></span>
+                                            <span>Future</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Placement Test -->
+                                    <div class="placement-test">
+                                        <div class="test-header">
+                                            <h5><i class="bi bi-clipboard2-check"></i> Placement Test Results</h5>
+                                        </div>
+                                        <div class="test-results">
+                                            <div class="test-item">
+                                                <span class="test-subject">English Level</span>
+                                                <span class="test-score">Level 2</span>
                                             </div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-success" style="width: 50%"></div>
+                                            <div class="test-item">
+                                                <span class="test-subject">Mathematics</span>
+                                                <span class="test-score">Basic Math Required</span>
                                             </div>
-                                            <div class="category-details">
-                                                <span class="completed">2 courses completed</span>
-                                                <span class="remaining">2 courses remaining</span>
+                                            <div class="test-item">
+                                                <span class="test-subject">IT Fundamentals</span>
+                                                <span class="test-score">Required</span>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="next-steps mt-4">
-                                        <h6><i class="bi bi-arrow-right-circle-fill"></i> Next Steps</h6>
-                                        <ul class="steps-list">
-                                            <li>Complete remaining Major Requirements (21 CR)</li>
-                                            <li>Take 2 more Elective courses (6 CR)</li>
-                                            <li>Finish University Requirements (6 CR)</li>
-                                        </ul>
+                                    <!-- Foundation Year -->
+                                    <div class="academic-year foundation completed">
+                                        <div class="year-header">
+                                            <h5>Foundation Year</h5>
+                                            <span class="year-status">Completed</span>
+                                        </div>
+                                        <div class="semesters">
+                                            <div class="semester">
+                                                <h6>Semester 1</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">ENGL0102</span>
+                                                            <span class="course-name">English Level 2</span>
+                                                            <span class="course-credits">0 CR</span>
+                                                            <span class="course-grade">Pass</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">MATH0101</span>
+                                                            <span class="course-name">Basic Mathematics</span>
+                                                            <span class="course-credits">0 CR</span>
+                                                            <span class="course-grade">Pass</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="semester">
+                                                <h6>Semester 2</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">ENGL0103</span>
+                                                            <span class="course-name">English Level 3</span>
+                                                            <span class="course-credits">0 CR</span>
+                                                            <span class="course-grade">Pass</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">
+                                                                <span class="prereq-course completed">ENGL0102</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">MATH0102</span>
+                                                            <span class="course-name">Advanced Mathematics</span>
+                                                            <span class="course-credits">0 CR</span>
+                                                            <span class="course-grade">Pass</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">
+                                                                <span class="prereq-course completed">MATH0101</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">COMP0101</span>
+                                                            <span class="course-name">IT Fundamentals</span>
+                                                            <span class="course-credits">0 CR</span>
+                                                            <span class="course-grade">Pass</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                    <!-- Year 1 -->
+                                    <div class="academic-year completed" data-year="1">
+                                        <div class="year-header">
+                                            <h5>Year 1 (Academic)</h5>
+                                            <span class="year-status">Completed</span>
+                                        </div>
+                                        <div class="semesters">
+                                            <div class="semester">
+                                                <h6>Fall 2022</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROG1110</span>
+                                                            <span class="course-name">Programming I</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">A</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">MATH1210</span>
+                                                            <span class="course-name">Calculus I</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">B+</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">ENGL1100</span>
+                                                            <span class="course-name">English Composition</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">A-</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">CSCI1101</span>
+                                                            <span class="course-name">Computer Science Fundamentals</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">A</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">GNED1100</span>
+                                                            <span class="course-name">Academic Skills</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">B+</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="semester">
+                                                <h6>Spring 2023</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROG1120</span>
+                                                            <span class="course-name">Programming II</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">A-</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">
+                                                                <span class="prereq-course completed">PROG1110</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">MATH1220</span>
+                                                            <span class="course-name">Discrete Mathematics</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">B</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">NETW1110</span>
+                                                            <span class="course-name">Networking Basics</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">B+</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">DBMS1110</span>
+                                                            <span class="course-name">Database Fundamentals</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">A-</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">GNED1200</span>
+                                                            <span class="course-name">Professional Communication</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">A</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="semester summer">
+                                                <h6>Summer 2023</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">WEBD1110</span>
+                                                            <span class="course-name">Web Development Basics</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">A</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item completed">
+                                                        <div class="course-main">
+                                                            <span class="course-code">GNED1300</span>
+                                                            <span class="course-name">Critical Thinking</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-grade">B+</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                    <!-- Year 2 (Current) -->
+                                    <div class="academic-year current" data-year="2">
+                                        <div class="year-header">
+                                            <h5>Year 2 (Academic)</h5>
+                                            <span class="year-status">In Progress</span>
+                                        </div>
+                                        <div class="semesters">
+                                            <div class="semester">
+                                                <h6>Fall 2023</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item in-progress">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROG2210</span>
+                                                            <span class="course-name">Object-Oriented Programming</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">In Progress</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">
+                                                                <span class="prereq-course completed">PROG1120</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item in-progress">
+                                                        <div class="course-main">
+                                                            <span class="course-code">DATA2310</span>
+                                                            <span class="course-name">Database Systems</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">In Progress</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">
+                                                                <span class="prereq-course completed">DBMS1110</span>
+                                                                <span class="prereq-course in-progress">PROG2210</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item in-progress">
+                                                        <div class="course-main">
+                                                            <span class="course-code">SENG2110</span>
+                                                            <span class="course-name">Software Engineering Principles</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">In Progress</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item in-progress">
+                                                        <div class="course-main">
+                                                            <span class="course-code">ALGO2110</span>
+                                                            <span class="course-name">Algorithms & Data Structures</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">In Progress</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item in-progress">
+                                                        <div class="course-main">
+                                                            <span class="course-code">STAT2110</span>
+                                                            <span class="course-name">Statistics for Computing</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">In Progress</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="semester">
+                                                <h6>Spring 2024</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROG2220</span>
+                                                            <span class="course-name">Advanced Web Development</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">NETW2310</span>
+                                                            <span class="course-name">Computer Networks</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">SECU2110</span>
+                                                            <span class="course-name">Information Security</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">
+                                                                <span class="prereq-course completed">NETW1110</span>
+                                                                <span class="prereq-course in-progress">PROG2210</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">MOBL2110</span>
+                                                            <span class="course-name">Mobile App Development</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">
+                                                                <span class="prereq-course in-progress">PROG2210</span>
+                                                            </span>
+                                                            <span class="coreq-label">Co-requisites:</span>
+                                                            <span class="prereq-courses">
+                                                                <span class="prereq-course planned">PROG2220</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">GNED2200</span>
+                                                            <span class="course-name">Ethics in Computing</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="semester summer">
+                                                <h6>Summer 2024 (Optional)</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item planned optional">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROJ2110</span>
+                                                            <span class="course-name">Mini Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Optional</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned optional">
+                                                        <div class="course-main">
+                                                            <span class="course-code">GNED2300</span>
+                                                            <span class="course-name">Innovation & Entrepreneurship</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Optional</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                    <!-- Year 3 -->
+                                    <div class="academic-year future" data-year="3">
+                                        <div class="year-header">
+                                            <h5>Year 3 (Academic)</h5>
+                                            <span class="year-status">Planned</span>
+                                        </div>
+                                        <div class="semesters">
+                                            <div class="semester">
+                                                <h6>Fall 2025</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROG3310</span>
+                                                            <span class="course-name">Advanced Programming</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">DATA3310</span>
+                                                            <span class="course-name">Advanced Database Systems</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">SENG3110</span>
+                                                            <span class="course-name">Advanced Software Engineering</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">ALGO3110</span>
+                                                            <span class="course-name">Advanced Algorithms</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">STAT3110</span>
+                                                            <span class="course-name">Advanced Statistics</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="semester">
+                                                <h6>Spring 2026</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROG3320</span>
+                                                            <span class="course-name">Advanced Web Development</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">NETW3310</span>
+                                                            <span class="course-name">Advanced Computer Networks</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">SECU3110</span>
+                                                            <span class="course-name">Advanced Information Security</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">MOBL3110</span>
+                                                            <span class="course-name">Advanced Mobile App Development</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">GNED3200</span>
+                                                            <span class="course-name">Advanced Ethics in Computing</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="semester summer">
+                                                <h6>Summer 2026 (Optional)</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item planned optional">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROJ3110</span>
+                                                            <span class="course-name">Major Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Optional</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned optional">
+                                                        <div class="course-main">
+                                                            <span class="course-code">GNED3300</span>
+                                                            <span class="course-name">Innovation & Entrepreneurship</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Optional</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Year 4 -->
+                                    <div class="academic-year future" data-year="4">
+                                        <div class="year-header">
+                                            <h5>Year 4 (Academic)</h5>
+                                            <span class="year-status">Planned</span>
+                                        </div>
+                                        <div class="semesters">
+                                            <div class="semester">
+                                                <h6>Fall 2027</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROG4410</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">DATA4410</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">SENG4110</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">ALGO4110</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">STAT4110</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="semester">
+                                                <h6>Spring 2028</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROG4420</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">NETW4310</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">SECU4110</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">MOBL4110</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned">
+                                                        <div class="course-main">
+                                                            <span class="course-code">GNED4200</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Planned</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="semester summer">
+                                                <h6>Summer 2028 (Optional)</h6>
+                                                <div class="courses-list">
+                                                    <div class="course-item planned optional">
+                                                        <div class="course-main">
+                                                            <span class="course-code">PROJ4110</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Optional</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-item planned optional">
+                                                        <div class="course-main">
+                                                            <span class="course-code">GNED4300</span>
+                                                            <span class="course-name">Research Project</span>
+                                                            <span class="course-credits">3 CR</span>
+                                                            <span class="course-status">Optional</span>
+                                                        </div>
+                                                        <div class="course-prerequisites">
+                                                            <span class="prereq-label">Prerequisites:</span>
+                                                            <span class="prereq-courses">None</span>
+                                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course Recommendations -->
-            <div class="col-md-8">
-                <div class="service-section">
-                    <h3 class="section-title">
-                        <i class="bi bi-lightbulb"></i> Recommended Courses
-                    </h3>
-                    <div class="recommended-courses">
-                        <div class="course-card">
-                            <div class="course-header">
-                                <span class="course-code">PROG2210</span>
-                                <span class="credit-badge">3 CR</span>
-                            </div>
-                            <h4 class="course-title">Programming II</h4>
-                            <p class="course-description">Advanced programming concepts including object-oriented programming, inheritance, and polymorphism.</p>
-                            <div class="course-details">
-                                <div class="prerequisites">
-                                    <span class="detail-label">Prerequisites:</span>
-                                    <span class="detail-value">PROG1110 (Completed)</span>
-                                </div>
-                                <div class="course-stats">
-                                    <div class="stat">
-                                        <i class="bi bi-people-fill"></i>
-                                        <span>25/30 enrolled</span>
-                                    </div>
-                                    <div class="stat">
-                                        <i class="bi bi-calendar3"></i>
-                                        <span>MW 10:00-11:20</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-actions">
-                                <button class="btn btn-primary">
-                                    <i class="bi bi-plus-circle"></i> Add to Plan
-                                </button>
-                                <button class="btn btn-outline-secondary">
-                                    <i class="bi bi-info-circle"></i> Details
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Add more course cards with similar structure -->
-                        <!-- Additional recommended courses... -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Academic Status -->
-            <div class="col-md-4">
-                <div class="service-section">
-                    <h3 class="section-title">
-                        <i class="bi bi-info-circle"></i> Academic Status
-                    </h3>
-                    <div class="academic-status">
-                        <div class="status-item">
-                            <div class="status-header">
-                                <i class="bi bi-mortarboard-fill text-primary"></i>
-                                <h6>Academic Standing</h6>
-                            </div>
-                            <p class="status-value">Good Standing</p>
-                        </div>
-                        
-                        <div class="status-item">
-                            <div class="status-header">
-                                <i class="bi bi-calendar-check-fill text-success"></i>
-                                <h6>Expected Graduation</h6>
-                            </div>
-                            <p class="status-value">Spring 2025</p>
-                        </div>
-                        
-                        <div class="status-item warning">
-                            <div class="status-header">
-                                <i class="bi bi-exclamation-triangle-fill text-warning"></i>
-                                <h6>Course Load Warning</h6>
-                            </div>
-                            <p class="status-message">Maximum load: 15 credits due to academic probation</p>
-                        </div>
-                        
-                        <div class="registration-timeline">
-                            <h6>Important Dates</h6>
-                            <div class="timeline-item">
-                                <span class="date">Mar 15</span>
-                                <span class="event">Course Registration Opens</span>
-                            </div>
-                            <div class="timeline-item">
-                                <span class="date">Mar 20</span>
-                                <span class="event">Advising Session Deadline</span>
-                            </div>
-                            <div class="timeline-item">
-                                <span class="date">Mar 25</span>
-                                <span class="event">Add/Drop Period Begins</span>
                             </div>
                         </div>
                     </div>
