@@ -4,7 +4,7 @@
     border-radius: 6px;
     padding: 0.875rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.875rem;
 }
 
@@ -110,6 +110,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    user-select: none;
 }
 
 .level-info {
@@ -150,6 +152,9 @@
 .semester-block {
     padding: 2rem;
     border-bottom: 1px solid var(--bs-gray-200);
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInUp 0.5s ease forwards;
 }
 
 .semester-block.current {
@@ -458,7 +463,6 @@ body.high-contrast .academic-level.upcoming .level-header {
     border: none;
     transition: all 0.2s ease;
     white-space: nowrap;
-    margin-left: 1.5rem;
 }
 
 .download-btn:hover {
@@ -551,5 +555,180 @@ body.high-contrast .academic-level.upcoming .level-header {
 
 .academic-level.upcoming .level-header {
     background: linear-gradient(135deg, #495057, #6c757d);
+}
+
+/* Update academic stats grid to 4 columns */
+.academic-stats {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Update download button styles for the new location */
+.academic-stats .stat-item .download-btn {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-weight: inherit;
+    text-decoration: none;
+}
+
+.academic-stats .stat-item .download-btn:hover {
+    transform: none;
+    background: transparent;
+}
+
+.academic-stats .stat-item .download-btn:hover .stat-value {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.academic-stats .stat-item .download-btn:active {
+    transform: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .academic-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .academic-stats {
+        grid-template-columns: 1fr;
+        gap: 0.875rem;
+    }
+    
+    .academic-stats .stat-item .download-btn {
+        padding: 0.75rem;
+    }
+}
+
+/* Add these styles for collapsible functionality */
+.level-header {
+    cursor: pointer;
+    user-select: none;
+}
+
+.collapse-icon {
+    font-size: 1.25rem;
+    margin-left: 1rem;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.level-header[aria-expanded="true"] .collapse-icon {
+    transform: rotate(180deg);
+}
+
+/* Add transition for smooth collapse/expand */
+.collapse {
+    transition: height 0.35s ease;
+}
+
+/* Hover effect for level header */
+.level-header:hover {
+    background: linear-gradient(135deg, 
+        rgba(var(--primary-blue-rgb), 0.95), 
+        rgba(var(--primary-blue-dark-rgb), 0.95));
+}
+
+.academic-level.completed .level-header:hover {
+    background: linear-gradient(135deg, 
+        rgba(40, 167, 69, 0.95), 
+        rgba(32, 201, 151, 0.95));
+}
+
+.academic-level.upcoming .level-header:hover {
+    background: linear-gradient(135deg, 
+        rgba(73, 80, 87, 0.95), 
+        rgba(108, 117, 125, 0.95));
+}
+
+/* Add subtle animation for semester blocks */
+.semester-block {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add delay for each subsequent semester block */
+.semester-block:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.semester-block:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+/* Add styles for upcoming semester */
+.semester-status.upcoming {
+    background: rgba(108, 117, 125, 0.1);
+    color: #6c757d;
+}
+
+.upcoming-courses {
+    padding: 2rem;
+    text-align: center;
+    background: var(--bs-gray-100);
+    border-radius: 8px;
+}
+
+.upcoming-courses .alert {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    border: none;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.upcoming-courses .alert i {
+    font-size: 1.25rem;
+}
+
+/* Adjust animation timing for smoother transitions */
+.collapse {
+    transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add hover effect to collapse icon */
+.collapse-icon {
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+}
+
+.level-header:hover .collapse-icon {
+    opacity: 1;
+}
+
+/* High contrast mode adjustments */
+body.high-contrast .upcoming-courses {
+    background: #333;
+}
+
+body.high-contrast .upcoming-courses .alert {
+    background: #222;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .upcoming-courses {
+        padding: 1.5rem;
+    }
+    
+    .upcoming-courses .alert {
+        padding: 0.875rem 1.25rem;
+        text-align: left;
+    }
 }
   
