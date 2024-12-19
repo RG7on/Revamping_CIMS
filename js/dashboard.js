@@ -25,17 +25,6 @@ function toggleSidebar() {
     sidebar.classList.toggle('show');
 } 
 
-// Add this to your dashboard.js
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize GPA circles
-    const gpaCircles = document.querySelectorAll('.gpa-circle');
-    gpaCircles.forEach(circle => {
-        const value = parseFloat(circle.dataset.value);
-        const progress = (value / 4) * 100; // Assuming max GPA is 4.0
-        circle.querySelector('.circle-progress').style.setProperty('--progress', progress);
-    });
-}); 
-
 // Toggle password visibility
 document.querySelectorAll('.toggle-password').forEach(button => {
     button.addEventListener('click', function() {
@@ -50,22 +39,6 @@ document.querySelectorAll('.toggle-password').forEach(button => {
             input.type = 'password';
             icon.classList.remove('bi-eye-slash');
             icon.classList.add('bi-eye');
-        }
-    });
-});
-
-// Initialize attendance pie charts
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.pie-wrapper').forEach(wrapper => {
-        const absencePercentage = wrapper.dataset.absence;
-        const pieProgress = wrapper.querySelector('.pie-progress');
-        pieProgress.style.setProperty('--absence', absencePercentage);
-        
-        // Set color based on absence percentage
-        if (absencePercentage >= 15) {
-            pieProgress.classList.add('critical');
-        } else if (absencePercentage >= 10) {
-            pieProgress.classList.add('warning');
         }
     });
 });

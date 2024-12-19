@@ -107,38 +107,37 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: conic-gradient(
-        var(--primary-orange) calc(var(--progress) * 1%),
-        #f0f0f0 calc(var(--progress) * 1%)
-    );
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.circle-progress::before {
+.circle-progress::after {
     content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--primary-orange) var(--progress, 0%),
+        #f0f0f0 var(--progress, 0%)
+    );
+}
+
+.circle-inner {
     position: absolute;
     width: 80%;
     height: 80%;
     background: white;
     border-radius: 50%;
-}
-
-.circle-inner {
-    position: relative;
-    text-align: center;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
 }
 
 .gpa-value {
-    position: relative;
     font-size: 1.75rem;
     font-weight: bold;
     color: var(--primary-orange);
@@ -149,6 +148,31 @@ body {
 .gpa-label {
     font-size: 0.875rem;
     color: #6c757d;
+}
+
+/* High contrast mode adjustments */
+body.high-contrast .circle-inner {
+    background: #333;
+}
+
+body.high-contrast .circle-progress::after {
+    background: conic-gradient(
+        var(--primary-orange) var(--progress, 0%),
+        #444 var(--progress, 0%)
+    );
+}
+
+/* Add these CSS custom properties for each GPA circle */
+.gpa-circle[data-value="3.94"] {
+    --progress: 98.5%;
+}
+
+.gpa-circle[data-value="3.40"] {
+    --progress: 85%;
+}
+
+.gpa-circle[data-value="3.32"] {
+    --progress: 83%;
 }
 
 /* Quick Actions */
@@ -502,6 +526,7 @@ body.high-contrast .info-item span {
     color: var(--bs-dark);
 }
 
+/* Attendance Overview Styles */
 .attendance-overview {
     margin: 0;
     width: 100%;
@@ -526,6 +551,7 @@ body.high-contrast .info-item span {
     gap: 0.5rem;
 }
 
+/* New CSS-only pie chart styles */
 .pie-wrapper {
     width: 80px;
     height: 80px;
@@ -540,10 +566,40 @@ body.high-contrast .info-item span {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: conic-gradient(#28a745 calc(var(--absence) * 3.6deg), #e9ecef 0deg);
     position: relative;
 }
 
+/* Base pie chart styles */
+.pie-progress::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+        #28a745 var(--absence-angle, 0deg),
+        #e9ecef var(--absence-angle, 0deg)
+    );
+}
+
+/* Warning state */
+.pie-wrapper[data-absence^="1"] .pie-progress::after {
+    background: conic-gradient(
+        #ffc107 var(--absence-angle, 0deg),
+        #e9ecef var(--absence-angle, 0deg)
+    );
+}
+
+/* Critical state */
+.pie-wrapper[data-absence^="2"] .pie-progress::after,
+.pie-wrapper[data-absence^="3"] .pie-progress::after,
+.pie-wrapper[data-absence^="4"] .pie-progress::after {
+    background: conic-gradient(
+        #dc3545 var(--absence-angle, 0deg),
+        #e9ecef var(--absence-angle, 0deg)
+    );
+}
+
+/* Inner white circle */
 .pie-progress::before {
     content: '';
     position: absolute;
@@ -551,13 +607,14 @@ body.high-contrast .info-item span {
     height: 85%;
     background: white;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .absence-percentage {
     position: relative;
     font-size: 1.1rem;
     font-weight: bold;
-    z-index: 1;
+    z-index: 2;
     margin-bottom: -3px;
 }
 
@@ -565,24 +622,70 @@ body.high-contrast .info-item span {
     position: relative;
     font-size: 0.55rem;
     color: #6c757d;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     width: 80%;
     line-height: 1;
 }
 
-/* Specific styling for normal state */
-.pie-progress:not(.warning):not(.critical) .absence-label {
-    font-size: 0.6rem;
+/* Set angles for each absence percentage using custom properties */
+.pie-wrapper[data-absence="4"] {
+    --absence-angle: 14.4deg;  /* 4% * 3.6 */
 }
 
-/* Warning states colors */
-.pie-progress.warning {
-    background: conic-gradient(#ffc107 calc(var(--absence) * 3.6deg), #e9ecef 0deg);
+.pie-wrapper[data-absence="5"] {
+    --absence-angle: 18deg;    /* 5% * 3.6 */
 }
 
-.pie-progress.critical {
-    background: conic-gradient(#dc3545 calc(var(--absence) * 3.6deg), #e9ecef 0deg);
+.pie-wrapper[data-absence="8"] {
+    --absence-angle: 28.8deg;  /* 8% * 3.6 */
+}
+
+.pie-wrapper[data-absence="14"] {
+    --absence-angle: 50.4deg;  /* 14% * 3.6 */
+}
+
+.pie-wrapper[data-absence="18"] {
+    --absence-angle: 64.8deg;  /* 18% * 3.6 */
+}
+
+/* Warning and Critical Labels */
+.pie-wrapper[data-absence^="1"] .absence-label {
+    content: "Warning 1";
+}
+
+.pie-wrapper[data-absence^="2"] .absence-label,
+.pie-wrapper[data-absence^="3"] .absence-label,
+.pie-wrapper[data-absence^="4"] .absence-label {
+    content: "Warning 2";
+}
+
+/* High contrast mode adjustments */
+body.high-contrast .pie-progress::before {
+    background: #333;
+}
+
+body.high-contrast .pie-progress::after {
+    background: conic-gradient(
+        #28a745 var(--absence-angle, 0deg),
+        #444 var(--absence-angle, 0deg)
+    );
+}
+
+body.high-contrast .pie-wrapper[data-absence^="1"] .pie-progress::after {
+    background: conic-gradient(
+        #ffc107 var(--absence-angle, 0deg),
+        #444 var(--absence-angle, 0deg)
+    );
+}
+
+body.high-contrast .pie-wrapper[data-absence^="2"] .pie-progress::after,
+body.high-contrast .pie-wrapper[data-absence^="3"] .pie-progress::after,
+body.high-contrast .pie-wrapper[data-absence^="4"] .pie-progress::after {
+    background: conic-gradient(
+        #dc3545 var(--absence-angle, 0deg),
+        #444 var(--absence-angle, 0deg)
+    );
 }
 
 /* Add smooth transitions for theme switching */
@@ -690,6 +793,73 @@ h5 i {
 /* Attendance Overview title specific */
 .attendance-overview .card-title i {
     color: var(--primary-orange);
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    /* Text alignment */
+    text-align: right;
+}
+
+[dir="rtl"] .navbar-nav {
+    padding-right: 0;
+}
+
+[dir="rtl"] .dropdown-menu {
+    text-align: right;
+}
+
+[dir="rtl"] .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .ms-2 {
+    margin-right: 0.5rem !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-2 {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .me-3 {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .notification-icon {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+[dir="rtl"] .stat-indicator {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .info-list li {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .info-list i {
+    margin-right: 0;
+    margin-left: 0.75rem;
+}
+
+[dir="rtl"] .action-card i {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+[dir="rtl"] .dropdown-item i {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+[dir="rtl"] .accessibility-controls {
+    left: 20px;
+    right: auto;
 }
 
 .scrollable-attendance {
@@ -1518,4 +1688,36 @@ body.high-contrast .profile-dropdown .text-muted {
 body.high-contrast .status-item {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.15);
+}
+
+.toggle-password {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-sm);
+}
+
+.toggle-password:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--primary-blue);
+}
+
+.toggle-password:active {
+    transform: scale(0.95);
+}
+
+/* High contrast mode */
+body.high-contrast .toggle-password {
+    color: #fff;
+}
+
+body.high-contrast .toggle-password:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--primary-orange);
 }
