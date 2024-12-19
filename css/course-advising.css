@@ -1150,12 +1150,7 @@ body.high-contrast .coreq-label {
 .journey-legend {
     display: flex;
     gap: 2rem;
-    padding: 1rem 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
     justify-content: center;
-    margin-bottom: 2rem;
-    border: 1px solid #e9ecef;
 }
 
 .legend-item {
